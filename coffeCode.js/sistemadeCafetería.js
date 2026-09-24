@@ -9,7 +9,6 @@ function agregar(nombre, precio, stock, categoria ){
     inventario.push(nuevoProducto);
     console.log("Producto nuevo agregado :D");
 };
-
 /* LISTAR PRODUCTOS */
 function listar() {
     if(inventario.length == 0) {

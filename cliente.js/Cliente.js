@@ -1,10 +1,8 @@
-
-
 function mostraMenu(){
     console.log("\n ---------------menu del dia-----------------");
     consultarProductos.forEach(function(producto) {
         console.log(`${producto.id} | ${producto.nombre} | $${producto.precio.toFixed(2)}`);
-    })
+    })}
 
 function consultarProducto(){
      let producto = consultarProductos.find(function(productos){
@@ -42,4 +40,27 @@ function crearPedido(id, cantidad){
         cantidad: cantidad,
 
       };
+}
+
+let productos = inventario;
+
+function mostrarMenu() {
+  console.log("\n---------------menu del dia-----------------");
+
+  productos.forEach(function (producto) {
+    console.log(`${producto.nombre} | $${producto.precio.toFixed(2)}`);
+  });
+}
+
+function mostrarPromociones() {
+  const promociones = productos.map(function (producto) {
+    let precioConDescuento = producto.precio * 0.9;
+    return `${producto.nombre} | antes $${producto.precio.toFixed(2)} | ahora $${precioConDescuento.toFixed(2)}`;
+  });
+
+  console.log("\n---------------promociones-----------------");
+
+  promociones.forEach(function (promo) {
+    console.log(promo);
+  });
 }
