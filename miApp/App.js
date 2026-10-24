@@ -1,40 +1,15 @@
-/* zona de exportaciones */
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import { Saludo} from './componentes/Saludo';
-import { Saludo2} from './componentes/Saludo2';
-import { Perfil} from './componentes/Perfil';
+/* zona de importaciones*/
+
+import { StyleSheet, View, Text, Button } from 'react-native';
+import MenuScreen from './Screen/MenuScreen';
 
 /* zona main (componentes oscreens) */
 export default function App() {
   return (
+
     <View style={styles.container}>
+      <MenuScreen/>
      
-
-      <Perfil 
-      nombre="Schoenstatt"
-      carrera="ITITD"
-      materia="movil"
-      cuatrimestre="4°"
-      style={styles.tarjeta1}></Perfil>
-
-      <Perfil 
-      nombre="Judith"
-      carrera="Sistemas"
-      materia="movil"
-      cuatrimestre="13°"
-      style={styles.tarjeta2}></Perfil>
-
-    <Perfil 
-      nombre="Paul"
-      carrera="ITIID"
-      materia="movil"
-      cuatrimestre="4°"
-      style={styles.tarjeta3}></Perfil>
-
-
-          
-      <StatusBar style="auto" />
     </View>
   );
 }
@@ -46,11 +21,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     flexDirection: 'column',
     alignItems:'center',
-    justifyContent:'start',
+    justifyContent:'center',
   },
-
-  tarjeta1:{backgroundColor:'#d6c9d3'},
-  tarjeta2:{backgroundColor:'#b4e0eb'},
-  tarjeta3:{backgroundColor:'#fac1de'},
 
 });
