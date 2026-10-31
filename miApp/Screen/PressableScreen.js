@@ -13,8 +13,8 @@ export default function PressableScreen() {
   return (
 
     <View style={styles.container}>
-        <text>Aqui va la practica 11</text>
-        <text>equipo de Karen</text>
+        <Text>Aqui va la practica 11</Text>
+        <Text>equipo de Karen</Text>
         <Text style = {styles.titulo}>Practica: switch y Pressable</Text>
 
         <Switch
@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
     },
 
 
-});
+})
