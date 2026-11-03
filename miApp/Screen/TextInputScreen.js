@@ -2,13 +2,13 @@
 import { StyleSheet, View, Text, TextInput, Button, Alert, Platform} from 'react-native';
 import {useState} from 'react';
 
-const mostrarAlerta = (titulo, mesaje) =>{
+const mostrarAlerta = (titulo, mensaje) =>{
   if (Platform.OS === 'web'){
     window.alert(`{titulo}\n\n ${mensaje}`);
   }
 
   else{
-    Alert.alert(titulo, mensaje);
+    Alert.alert(titulo,mensaje);
   }
 }
 
