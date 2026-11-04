@@ -5,7 +5,7 @@ import SafeScreen from './SafeScreen';
 import PressableScreen from './PressableScreen';
 import TarjetaScreen from './TarjetaScreen';
 import TextInputScreen from './TextInputScreen';
-import FastListScreen from './FastListScreen';
+import FastListScreen from './FlatListScreen';
 import ImageScreen from './ImageScreen';
 import ModalScreen from './ModalScreen';
 import ActivityScreen from './ActivityScreen';
@@ -14,6 +14,8 @@ import ActivityScreen from './ActivityScreen';
 
 /* zona main (componentes oscreens) */
 export default function MenuScreen() {
+
+
     const[screen, setScreen]= useState('menu');
 
     switch(screen){
@@ -40,13 +42,14 @@ export default function MenuScreen() {
             return (
 
                 <View style={styles.container}>
+
                     <Text>Menu de Practicas</Text>
                      <Button title="Practica Tarjetas" onPress={()=>setScreen('tarjetas')}></Button>
                      
                       <Button title="Practica SafeAreaView" onPress={()=>setScreen('safe')}></Button>
                      
                        <Button title="Practica Pressable" onPress={()=>setScreen('press')}></Button>
-                       -
+                       
                        <Button title="Practica TextInput & Alert" onPress={()=>setScreen('text input')}></Button>
                        
                        <Button title="Practica FlatList & Section list" onPress={()=>setScreen('flatlist')}></Button>
