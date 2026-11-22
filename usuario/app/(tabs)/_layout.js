@@ -1,4 +1,5 @@
 import {Tabs} from "expo-router";
+import {Ionicons, FontAwesome} from  '@expo/vector-icons';
 
 export default function TabsLayout(){
 
@@ -15,14 +16,21 @@ export default function TabsLayout(){
      <Tabs.Screen
 
      name="alta"
-     options={{title:"Formulario"}}
+     options={{
+      title:"Formulario",
+      tabBarIcon: ({color, size})=>( <Ionicons name="person-add" size={15} color="blue"/>),
+    }}
      
      />
 
      <Tabs.Screen
 
      name="consulta"
-     options={{title:"Listado"}}
+     options={{
+      title:"Listado",
+      tabBarIcon:({color, size})=> (<FontAwesome name="list" size={15} color="blue"/>),
+
+    }}
      
      />
 
